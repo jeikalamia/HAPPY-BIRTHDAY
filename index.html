@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for you</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #c8bda6, #b7a98c, #d8ccb5);
+  background-size: 400% 400%;
+  animation: bgMove 15s ease infinite;
+  color: #3e3426;
+  overflow-y: auto;
+}
+
+@keyframes bgMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  position: relative;
+  margin: 50px auto;
+  width: 90%;
+  text-align: center;
+}
+
+/* inputs */
+input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #e5dccb;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #a8977a;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.hidden { display: none; }
+
+/* message */
+#message {
+  width: 90%;
+  max-width: 420px;
+  margin: auto;
+  text-align: left;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+/* title */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 22px;
+  margin-bottom: 15px;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  text-align: center;
+}
+
+/* slideshow */
+.slideshow {
+  width: 260px;
+  height: 260px;
+  margin: 15px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0;
+  transition: opacity 2s ease, transform 5s ease;
+  transform: scale(1);
+  filter: brightness(0.9);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* text parts */
+.msg-part {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.2s ease;
+  margin-bottom: 14px;
+}
+
+.msg-part.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hidden ily */
+#hiddenILY {
+  text-align: center;
+  margin-top: 25px;
+  opacity: 0;
+  font-size: 16px;
+  letter-spacing: 2px;
+  transition: opacity 2s ease;
+}
+
+/* fake button */
+#fakeBtn {
+  position: absolute;
+}
+
+/* hearts */
+.heart {
+  position: absolute;
+  font-size: 14px;
+  opacity: 0.25;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h3>HELLO KINTH!!</h3>
+<input type="password" id="pass" placeholder="what's my favorite color?"><br>
+<button onclick="checkPass()">OPEN</button>
+
+<div id="countdownBox" class="hidden">
+  <p>wait a little...</p>
+  <h1 id="count">5</h1>
+</div>
+
+<div id="main" class="hidden">
+  <p>pick carefully :)</p>
+  <button id="fakeBtn">CLICK HERE!</button>
+  <button onclick="realOpen()">DONT CLICK!</button>
+</div>
+
+<div id="message" class="hidden">
+
+<div class="title" id="titleText">HAPPY BIRTHDAY MYLOVE💋</div>
+
+<div class="slideshow">
+  <img class="slide active" src="Je1.jpeg">
+  <img class="slide" src="Je2.jpeg">
+  <img class="slide" src="Je3.jpeg">
+  <img class="slide" src="Je4.jpeg">
+  <img class="slide" src="Je5.jpeg">
+</div>
+
+<div class="msg-part">HELLO LOVE, HAPPY BIRTHDAY</div>
+
+<div class="msg-part">
+I DON’T REALLY KNOW HOW TO MAKE THIS PERFECT… BUT I WANTED TO TRY RAJUD HAHA.
+</div>
+
+<div class="msg-part">
+DIJUDKO KABALO MO SWEET MESSAGE ABI HAHA MAONG I MADE THIS PARA MA FEEL NIMO HOW SPECIAL YOU ARE TO ME😜 KAYASA KISS KO BI HAHA
+</div>
+
+<div class="msg-part">
+BITAW, ILOVEYOU TO THE MOON AND BACK MWAHHH<br>
+AT DAHIL 19 NA IKAW, MAY DIECINUEVE KA NGA KISS SAKON 💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋
+</div>
+
+<div class="msg-part">
+HAYSTT IMISSYOU NAJUD, ULI SA BI, BD BITAW NIMO HAHA<br>
+PERO SA TINUOD I HOPE GOD WILL GRANT YOU GOOD HEALTH AND MORE BIRTHDAYS PA LOVE, AMPING KA ARA PIRME HA, WALA RABA KO DRA PARA MO EXTRA TAKE GOOD CARE SAIMOHA MAONG PAG AMPING <br>
+ENJOY YOUR DAY LANG PO MYLOVE
+</div>
+
+<div class="msg-part">
+THANK YOU SO MUCH FOR BEING A GOOD BOYFRIEND LOVE, WORDS CAN'T DEFINED JUD UG HOW THANKFULL I AM SAIMOHA LOVE<br>
+NEVER A WRONG DECISION JUD NA GISUGOT TIKA🥹🥹AND HOPEFULLY WE'LL LAST LIKE HOW WE WANTED🫶
+</div>
+
+<div class="msg-part">
+AGAIN, HAPPY BIRTHDAY HANDSOME, ILOVEYOUSOMUCH💋
+</div>
+
+<div class="msg-part">ー MADE BY YOUR WIFE</div>
+
+<div id="hiddenILY">kuan uli sa na esmeringhoy ta HAHAHA</div>
+
+</div>
+</div>
+
+<audio id="music" loop>
+  <source src="FOUND YOU.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function checkPass() {
+  const pass = document.getElementById("pass").value;
+
+  if(pass === "yellow") {
+    document.getElementById("countdownBox").classList.remove("hidden");
+
+    let count = 5;
+    let interval = setInterval(() => {
+      count--;
+      document.getElementById("count").innerText = count;
+
+      if(count === 0){
+        clearInterval(interval);
+        document.getElementById("countdownBox").classList.add("hidden");
+        document.getElementById("main").classList.remove("hidden");
+      }
+    }, 1000);
+
+  } else {
+    alert("MALI YA EYUGS!");
+  }
+}
+
+const fakeBtn = document.getElementById("fakeBtn");
+fakeBtn.addEventListener("mouseover", () => {
+  fakeBtn.innerText = "CLICK THIS!";
+  fakeBtn.style.top = Math.random() * 70 + "vh";
+  fakeBtn.style.left = Math.random() * 70 + "vw";
+});
+
+function realOpen(){
+  document.getElementById("main").classList.add("hidden");
+  document.getElementById("message").classList.remove("hidden");
+
+  let music = document.getElementById("music");
+  music.play().catch(() => {});
+
+  const parts = document.querySelectorAll(".msg-part");
+  const title = document.getElementById("titleText");
+  const ily = document.getElementById("hiddenILY");
+
+  setTimeout(() => { title.style.opacity = 1; }, 500);
+
+  parts.forEach((part, i) => {
+    setTimeout(() => {
+      part.classList.add("show");
+    }, 1500 + (i * 2000));
+  });
+
+  setTimeout(() => {
+    ily.style.opacity = 1;
+  }, 1500 + (parts.length * 2000) + 1500);
+}
+
+/* slideshow */
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 5000);
+
+/* hearts */
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "♥";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+}, 1200);
+</script>
+
+</body>
+</html>
